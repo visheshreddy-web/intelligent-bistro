@@ -1,0 +1,24 @@
+{
+  "name": "intelligent-bistro",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @bistro/shared -w @bistro/api",
+    "test": "npm run test -w @bistro/shared",
+    "dev:api": "npm run build -w @bistro/shared && npm run dev -w @bistro/api",
+    "dev:mobile": "npm run start -w @bistro/mobile",
+    "dev:web": "npm run web -w @bistro/mobile",
+    "dev:agent": "npm run dev -w @bistro/agent",
+    "android:reverse": "node scripts/android-reverse.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "react-dom": "19.1.0",
+    "react-native-web": "^0.21.0"
+  }
+}

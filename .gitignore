@@ -1,0 +1,16 @@
+node_modules
+dist
+.expo
+*.log
+.DS_Store
+
+# Secrets & local config (never commit real keys)
+.env
+.env.*
+!.env.example
+apps/api/.env
+apps/mobile/.env
+
+# Tooling / OS
+*.tsbuildinfo
+Thumbs.db
